@@ -1,0 +1,15 @@
+{% extends 'partials/base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row mt-2">
+        <div class="col-md-12">
+            <!-- Increase the height of the container -->
+            <div style="height: 600px;">
+                {{ map1 | safe }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

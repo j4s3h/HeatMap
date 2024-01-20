@@ -1,0 +1,90 @@
+location_id,location_name,latitude,longitude
+1,Aduas Centro (Aduas),15.5002,120.9633
+2,Aduas Norte,15.5015,120.9719
+3,Aduas Sur,15.4951,120.9668
+4,Bagong Sikat,15.5259,121.0249
+5,Bagong Buhay,15.4936,121.065
+6,Bakero,15.5154,121.0249
+7,Bakod Bayan,15.4747,121.0192
+8,Balite,15.5382,120.979
+9,Bangad,15.4998,121.0249
+10,Bantug Bulalo,15.4907,120.9783
+11,Bantug Norte,15.4919,120.9833
+12,Barlis,15.5237,120.9633
+13,Barrera District (Poblacion),15.4812374,120.963969
+14,Bernardo District (Poblacion),15.4824,120.9626
+15,Bitas,15.5002,120.9805
+16,Bonifacio District (Poblacion),15.48606,120.95509
+17,Buliran,15.547,120.9561
+18,Cabu,15.5205,121.0593
+19,Caudillo,15.4862,120.9446
+20,Calawagan(Kalawagan),15.535041,121.025757
+21,Caalibangbangan,15.5192,120.9331
+22,Camp Tinio (Campo Tinio),15.4928,121.0364
+23,Caridad Village,15.4773,120.9726
+24,Cinco-Cinco,15.5001,120.9217
+25,City Supermarket/Bayan (Poblacion),15.4882,120.9636
+26,Communal,15.5336,121.0421
+27,Cruz Roja,15.5156,120.9905
+28,Daan Sarile,15.5121,120.979
+29,Dalampang,15.5374,120.9503
+30,Dicarma (Poblacion),15.4844,120.9706
+31,Dimasalang (Poblacion),15.4862,120.9654
+32,Dionisio S. Garcia (D.S. Garcia),15.4723,120.9611
+33,Fatima (Poblacion),15.8122,120.9606
+34,General Luna (Poblacion),15.4873,120.9657
+35,Hermogenes C. Concepcion Sr. (H. Concepcion),15.46518,120.94922
+36,Ibabao-Bana,15.4802,120.9159
+37,Imelda District,15.4765,120.9611
+38,Isla (Poblacion),15.4929,120.9584
+39,Kalikid Norte,15.4902,121.0536
+40,Kalikid Sur,15.4776,121.0507
+41,Kapitan Pepe Subdivision (Poblacion),15.4865,120.9734
+42,Lagare,15.5129,121.0077
+43,Lourdes (Matungal-tungal),15.4964,121.0134
+44,M.S. Garcia,15.4808,120.9668
+45,Mabini Extension,15.4836,120.974
+46,Mabini Homesite,15.4767,120.9805
+47,Macatbong,15.5113,121.0691
+48,Magsaysay District,15.4872,120.9805
+49,Magsaysay South,15.4845,120.9769
+50,Maria Theresa,15.4865,120.9701
+51,Matadero (Poblacion),15.4895,120.9629
+52,Mayapyap Norte,15.527,120.9503
+53,Mayapyap Sur,15.5166,120.9503
+54,Melojavilla (Poblacion),15.486,120.9608
+55,Nabao (Poblacion),15.4902,120.9652
+56,Obrero,15.5294,121.002
+57,Padre Burgos (Poblacion),15.4893,120.9668
+58,Padre Crisostomo,15.4737,120.9661
+59,Pagas,15.5046,120.9518
+60,Palagay,15.4694,120.9016
+61,Pamaldan,15.4932,120.9331
+62,Pangatian,15.5067,121.0478
+63,Patalac,15.4624,121.065
+64,Polilio,15.4541,120.9159
+65,Pula,15.5608,120.9676
+66,Quezon District (Poblacion),15.4886,120.9726
+67,Rizdelis (Poblacion),15.4885,120.9604
+68,Samon,15.5027,120.9389
+69,San Isidro,15.4969,120.9934
+70,San Josef Norte,15.4812,120.9493
+71,San Josef Sur,15.4716,120.946
+72,San Juan Accfa (San Juan Poblacion),15.47088,120.95572
+73,San Roque Norte,15.4887,120.9686
+74,San Roque Sur,15.4719,120.9593
+75,Sanbermicristi (Poblacion),15.48,120.96
+76,Sangitan,15.492,120.9693
+77,Sangitan East,15.498645,120.9754
+78,Santa Arcadia,15.457,120.9819
+79,Santo Niño,15.4962,120.9597
+80,Sapang,15.528,120.969
+81,Sumacab Este,15.4566,120.9676
+82,Sumacab Norte,15.4558,120.9389
+83,Sumacab South,15.4479,120.9561
+84,Talipapa,15.4712,120.9317
+85,Valdefuente,15.5107,120.963
+86,Valle Cruz,15.4782,120.9962
+87,Vijandre District (Poblacion),15.4857,120.9586
+88,Villa Ofelia Subdivision (Villa Ofelia-Caridad),15.4814,120.9711
+89,Zuleta District (Poblacion),15.4801,120.9578
