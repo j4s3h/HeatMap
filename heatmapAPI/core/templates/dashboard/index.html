@@ -4,12 +4,56 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row mt-2">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <!-- Increase the height of the container -->
-            <div style="height: 600px;">
+            <div id="map-container" style="height: 600px;">
                 {{ map1 | safe }}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Display user's current location -->
+            <div id="current-location-info">
+                <h3>Current Location:</h3>
+                <p id="location"></p>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    // Function to initialize the map
+    function initMap() {
+        // Check if geolocation is supported
+        if (navigator.geolocation) {
+            // Get current location
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                // Display the current location on the page
+                document.getElementById('location').innerHTML = 'Latitude: ' + latitude + ', Longitude: ' + longitude;
+
+                // Create map centered around the user's current location
+                var map = L.map('map-container').setView([latitude, longitude], 16); // Adjust zoom level here
+
+                // Add tile layer
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+                // Add a marker for the current location
+                L.marker([latitude, longitude]).addTo(map)
+                    .bindPopup('Your Location')
+                    .openPopup();
+            });
+        } else {
+            // If geolocation is not supported, display a message
+            alert('Geolocation is not supported by this browser.');
+        }
+    }
+
+    // Call the initMap function when the page is loaded
+    window.onload = initMap;
+</script>
+
 {% endblock %}

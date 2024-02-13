@@ -11,7 +11,7 @@ def index(request):
     # Get crime data and corresponding location from the database
     crimes = Crime.objects.select_related('location')
 
-    # Create a Folium map centered at a specific location
+    # Create a Folium map centered at a default location
     map1 = folium.Map(location=[15.48586000, 120.96648000], tiles='CartoDB Dark Matter', zoom_start=14)
 
     # Create a list to store latitudes and longitudes for the heatmap
