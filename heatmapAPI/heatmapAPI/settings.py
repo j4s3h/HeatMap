@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&h1v!0bt5*x4d(65*myqmj&e7ud5y*p&ri@75b+9s%=hbysg#='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = True
 
 ALLOWED_HOSTS = ['HeatMapCab.pythonanywhere.com','localhost']
 

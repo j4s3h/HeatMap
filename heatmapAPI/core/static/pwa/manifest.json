@@ -7,8 +7,8 @@
     "theme_color": "#000000",
     "icons": [
       {
-        "src": "/static/icons/python-powered-h-50x65.png",
-        "sizes": "50x65",
+        "src": "/static/icon/final-image.png",
+        "sizes": "144x144",
         "type": "image/png"
       }
       

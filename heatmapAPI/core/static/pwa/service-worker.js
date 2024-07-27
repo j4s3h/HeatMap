@@ -1,7 +1,7 @@
 const CACHE_NAME = 'osm-cache-v1';
 const urlsToCache = [
   
-  '/static/offline.html',
+  '/static/pwa/offline.html',
   // Add other essential static assets here
 ];
 
@@ -42,7 +42,7 @@ self.addEventListener('fetch', (event) => {
           });
         });
       }).catch(() => {
-        return caches.match('/static/offline.html');
+        return caches.match('/static/pwa/offline.html');
       })
     );
     return;
@@ -58,7 +58,7 @@ self.addEventListener('fetch', (event) => {
         });
       });
     }).catch(() => {
-      return caches.match('/static/offline.html');
+      return caches.match('/static/pwa/offline.html');
     })
   );
 });
