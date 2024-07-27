@@ -1,6 +1,6 @@
 const CACHE_NAME = 'osm-cache-v1';
 const urlsToCache = [
-  '/',
+  
   '/static/offline.html',
   // Add other essential static assets here
 ];
