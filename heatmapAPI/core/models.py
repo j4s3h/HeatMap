@@ -26,14 +26,3 @@ class Crime(models.Model):
         return f'{self.type_of_crime} at {self.location}'
 
 
-
-
-class Crime(models.Model):
-    id = models.AutoField(primary_key=True)
-    type_of_crime = models.CharField(max_length=255)
-    description_of_crime = models.CharField(max_length=255)
-    date_of_crime = models.DateField()
-    location = models.ForeignKey(Location, on_delete=models.CASCADE)
-    
-    def __str__(self):
-        return f'{self.type_of_crime} at {self.location}'
