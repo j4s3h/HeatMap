@@ -32,3 +32,5 @@ def index(request):
     }
 
     return render(request, 'dashboard/index.html', context)
+
+# meeded tp add PWA support of service-worker.js plus offline maps for map1
