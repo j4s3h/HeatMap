@@ -1,7 +1,4 @@
 
-
-
-
 import folium
 from folium import plugins
 from django.shortcuts import render
@@ -21,10 +18,10 @@ def index(request):
     for crime in crimes:
         heat_data.append([crime.location.latitude, crime.location.longitude])
 
-    # Add HeatMap layer to the map using the heat_data
+    
     map1.add_child(plugins.HeatMap(heat_data))
 
-    # Add Fullscreen plugin to the map
+    
     plugins.Fullscreen().add_to(map1)
 
     # Convert the map to HTML
