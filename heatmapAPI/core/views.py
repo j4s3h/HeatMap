@@ -21,7 +21,7 @@ def index(request):
     
     map1.add_child(plugins.HeatMap(heat_data))
 
-    
+    # how can I write a current location in this map
     plugins.Fullscreen().add_to(map1)
 
     # Convert the map to HTML
