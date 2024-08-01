@@ -1,3 +1,4 @@
+{% extends 'partials/base.html' %}
 {% block title %}Home Page{% endblock %}
 
 {% block content %}
@@ -6,7 +7,6 @@
         <div class="col-md-6">
             <!-- Increase the height of the container -->
             <div id="map-container" style="height: 600px;">
-                <!-- Placeholder for the map -->
                 {{ map1 | safe }}
             </div>
         </div>
@@ -14,7 +14,7 @@
             <!-- Display user's current location -->
             <div id="current-location-info">
                 <h3>Current Location:</h3>
-                <p id="location">Fetching location...</p>
+                <p id="location"></p>
             </div>
         </div>
     </div>
@@ -27,9 +27,7 @@
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
 <script>
-    var map;
-    var mapContainer = document.getElementById('map-container');
-
+    // Function to initialize the map
     function initMap() {
         // Check if geolocation is supported
         if (navigator.geolocation) {
@@ -41,26 +39,17 @@
                 // Display the current location on the page
                 document.getElementById('location').innerHTML = 'Latitude: ' + latitude + ', Longitude: ' + longitude;
 
-                // Initialize the map centered on the current location
-                map = L.map(mapContainer).setView([latitude, longitude], 14);
+                // Create map centered around the user's current location
+                var map = L.map('map-container').setView([latitude, longitude], 16); // Adjust zoom level here
 
-                // Add the tile layer (you can adjust this according to your needs)
-                L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-                    maxZoom: 19
+                // Add tile layer
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 }).addTo(map);
 
-                // Add a marker for the user's current location
-                L.marker([latitude, longitude]).addTo(map)
-                    .bindPopup('You are here!')
-                    .openPopup();
-
-                // If you have heat data, you can add it here
+                // Add marker to the map
                 var heatData = {{ map1|safe }};
                 L.heatLayer(heatData, { radius: 25 }).addTo(map);
-
-            }, function() {
-                // Handle errors
-                alert('Unable to retrieve your location.');
             });
         } else {
             // If geolocation is not supported, display a message
