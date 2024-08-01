@@ -51,6 +51,8 @@
                 L.marker([latitude, longitude]).addTo(map)
                     .bindPopup('Your Location')
                     .openPopup();
+                var heatData = {{ map1|safe }};
+                L.heatLayer(heatData, { radius: 25 }).addTo(map);
             });
         } else {
             // If geolocation is not supported, display a message
