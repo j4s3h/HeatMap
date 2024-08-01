@@ -3,6 +3,7 @@ import folium
 from folium import plugins
 from django.shortcuts import render
 from .models import Crime  # Import your Crime model or adjust the import as needed
+from folium.plugins import MarkerCluster
 
 def index(request):
     # Get crime data and corresponding location from the database
@@ -11,17 +12,20 @@ def index(request):
     # Create a Folium map centered at a default location
     map1 = folium.Map(location=[15.48586000, 120.96648000], tiles='CartoDB Dark Matter', zoom_start=14)
 
-    # Create a list to store latitudes and longitudes for the heatmap
-    heat_data = []
+    # Create a MarkerCluster object
+    marker_cluster = MarkerCluster().add_to(map1)
 
-    # Iterate through each crime and add its location to the heat_data list
+    # Iterate through each crime and add a marker to the cluster
     for crime in crimes:
-        heat_data.append([crime.location.latitude, crime.location.longitude])
+        folium.Marker(
+            location=[crime.location.latitude, crime.location.longitude],
+            popup=f'Crime: {crime.type}, Date: {crime.date}'
+        ).add_to(marker_cluster)
 
+    # Add the HeatMap to the map
+    map1.add_child(plugins.HeatMap(heat_data, radius=10, blur=15))
     
-    map1.add_child(plugins.HeatMap(heat_data))
-
-    
+    # Add fullscreen button
     plugins.Fullscreen().add_to(map1)
 
     # Convert the map to HTML
